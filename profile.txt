@@ -1,0 +1,393 @@
+Statistical profiling result from isolate-0x130008000-88260-v8.log, (128 ticks, 3 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+      2    1.6%          /usr/lib/system/libsystem_pthread.dylib
+      2    1.6%          /usr/lib/system/libsystem_malloc.dylib
+      1    0.8%          /usr/lib/system/libsystem_c.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      1    0.8%    0.8%  RegExp: ^is[A-Z]
+
+ [C++]:
+   ticks  total  nonlib   name
+     56   43.8%   45.5%  t __ZN2v88internal12_GLOBAL__N_133MatchArrayElementsKindToArgumentsEPNS0_7IsolateENS0_6HandleINS0_7JSArrayEEEPNS0_16BuiltinArgumentsEii
+     25   19.5%   20.3%  T __ZN4node13native_module15NativeModuleEnv15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      8    6.3%    6.5%  T _thread_info
+      4    3.1%    3.3%  T __ZN4node6crypto13SecureContext12AddRootCertsERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      3    2.3%    2.4%  t __ZN4node3url12_GLOBAL__N_15ParseERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      3    2.3%    2.4%  t __ZN4node2fsL4ReadERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      3    2.3%    2.4%  T _guarded_close_np
+      3    2.3%    2.4%  T __ZN4node7binding18GetInternalBindingERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    1.6%    1.6%  t __ZN4node2fsL22InternalModuleReadJSONERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    1.6%    1.6%  T __ZN4node7TTYWrap3NewERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    1.6%    1.6%  T __ZN4node6loader10ModuleWrap3NewERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.8%    0.8%  t __ZN4node6Buffer12_GLOBAL__N_111StringSliceILNS_8encodingE3EEEvRKN2v820FunctionCallbackInfoINS4_5ValueEEE
+      1    0.8%    0.8%  t __ZN4node2fsL5LStatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.8%    0.8%  t __ZN4node12_GLOBAL__N_123BrotliCompressionStreamINS0_20BrotliDecoderContextEE4InitERKN2v820FunctionCallbackInfoINS4_5ValueEEE
+      1    0.8%    0.8%  T __ZN4node6loader10ModuleWrap18SetSyntheticExportERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.8%    0.8%  T __ZN4node10contextify17ContextifyContext15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.8%    0.8%  T __ZN2v88internal9Accessors23IsJSObjectFieldAccessorEPNS0_7IsolateENS0_6HandleINS0_3MapEEENS4_INS0_4NameEEEPNS0_10FieldIndexE
+      1    0.8%    0.8%  T __ZN2v88internal18AstStringConstantsC1EPNS0_7IsolateEy
+      1    0.8%    0.8%  T __ZN2v88internal15AstValueFactory9GetStringEjbNS0_6VectorIKhEE
+
+ [Summary]:
+   ticks  total  nonlib   name
+      1    0.8%    0.8%  JavaScript
+    119   93.0%   96.7%  C++
+      1    0.8%    0.8%  GC
+      5    3.9%          Shared libraries
+      3    2.3%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     42   43.8%   32.8%  t __ZN2v88internal12_GLOBAL__N_133MatchArrayElementsKindToArgumentsEPNS0_7IsolateENS0_6HandleINS0_7JSArrayEEEPNS0_16BuiltinArgumentsEii
+     25   26.0%   19.5%  T __ZN4node13native_module15NativeModuleEnv15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      4    4.2%    3.1%  T __ZN4node6crypto13SecureContext12AddRootCertsERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      3    3.1%    2.3%  t __ZN4node3url12_GLOBAL__N_15ParseERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      3    3.1%    2.3%  t __ZN4node2fsL4ReadERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      3    3.1%    2.3%  T __ZN4node7binding18GetInternalBindingERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    2.1%    1.6%  t __ZN4node2fsL22InternalModuleReadJSONERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    2.1%    1.6%  T _guarded_close_np
+      2    2.1%    1.6%  T __ZN4node7TTYWrap3NewERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    2.1%    1.6%  T __ZN4node6loader10ModuleWrap3NewERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    1.0%    0.8%  t __ZN4node6Buffer12_GLOBAL__N_111StringSliceILNS_8encodingE3EEEvRKN2v820FunctionCallbackInfoINS4_5ValueEEE
+      1    1.0%    0.8%  t __ZN4node2fsL5LStatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    1.0%    0.8%  t __ZN4node12_GLOBAL__N_123BrotliCompressionStreamINS0_20BrotliDecoderContextEE4InitERKN2v820FunctionCallbackInfoINS4_5ValueEEE
+      1    1.0%    0.8%  T __ZN4node6loader10ModuleWrap4LinkERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    1.0%    0.8%  T __ZN4node6loader10ModuleWrap18SetSyntheticExportERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    1.0%    0.8%  T __ZN4node10contextify17ContextifyContext15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    1.0%    0.8%  T __ZN2v88internal9Accessors23IsJSObjectFieldAccessorEPNS0_7IsolateENS0_6HandleINS0_3MapEEENS4_INS0_4NameEEEPNS0_10FieldIndexE
+      1    1.0%    0.8%  T __ZN2v88internal15AstValueFactory9GetStringEjbNS0_6VectorIKhEE
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+     56   43.8%  t __ZN2v88internal12_GLOBAL__N_133MatchArrayElementsKindToArgumentsEPNS0_7IsolateENS0_6HandleINS0_7JSArrayEEEPNS0_16BuiltinArgumentsEii
+      5    8.9%    LazyCompile: ~fileURLToPath internal/url.js:1366:23
+      5  100.0%      LazyCompile: ~getPackageScopeConfig internal/modules/esm/resolve.js:173:31
+      5  100.0%        LazyCompile: ~getPackageType internal/modules/esm/resolve.js:645:24
+      5  100.0%          LazyCompile: ~defaultGetFormat internal/modules/esm/get_format.js:39:26
+      5  100.0%            LazyCompile: ~getFormat internal/modules/esm/loader.js:104:18
+      3    5.4%    t __ZN2v88internal12_GLOBAL__N_133MatchArrayElementsKindToArgumentsEPNS0_7IsolateENS0_6HandleINS0_7JSArrayEEEPNS0_16BuiltinArgumentsEii
+      1   33.3%      LazyCompile: ~finalizeResolution internal/modules/esm/resolve.js:291:28
+      1  100.0%        LazyCompile: ~moduleResolve internal/modules/esm/resolve.js:761:23
+      1  100.0%          LazyCompile: ~defaultResolve internal/modules/esm/resolve.js:824:24
+      1  100.0%            LazyCompile: ~resolve internal/modules/esm/loader.js:84:16
+      1   33.3%      LazyCompile: ~<anonymous> internal/util/inspect.js:131:5
+      1  100.0%        t __ZN2v88internal12_GLOBAL__N_133MatchArrayElementsKindToArgumentsEPNS0_7IsolateENS0_6HandleINS0_7JSArrayEEEPNS0_16BuiltinArgumentsEii
+      1  100.0%          Eval: ~<anonymous> internal/util/inspect.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      2    3.6%    LazyCompile: ~getPathFromURLPosix internal/url.js:1348:29
+      2  100.0%      LazyCompile: ~fileURLToPath internal/url.js:1366:23
+      1   50.0%        LazyCompile: ~getPackageScopeConfig internal/modules/esm/resolve.js:173:31
+      1  100.0%          LazyCompile: ~getPackageType internal/modules/esm/resolve.js:645:24
+      1  100.0%            LazyCompile: ~defaultGetFormat internal/modules/esm/get_format.js:39:26
+      1   50.0%        LazyCompile: ~finalizeResolution internal/modules/esm/resolve.js:291:28
+      1  100.0%          LazyCompile: ~moduleResolve internal/modules/esm/resolve.js:761:23
+      1  100.0%            LazyCompile: ~defaultResolve internal/modules/esm/resolve.js:824:24
+      2    3.6%    LazyCompile: ~C internal/deps/cjs-module-lexer/dist/lexer.js:1:1152
+      2  100.0%      LazyCompile: ~parse internal/deps/cjs-module-lexer/dist/lexer.js:1:131
+      2  100.0%        LazyCompile: ~cjsPreparseModuleExports internal/modules/esm/translators.js:225:34
+      2  100.0%          LazyCompile: ~commonjsStrategy internal/modules/esm/translators.js:182:60
+      2  100.0%            t __ZN2v88internal12_GLOBAL__N_133MatchArrayElementsKindToArgumentsEPNS0_7IsolateENS0_6HandleINS0_7JSArrayEEEPNS0_16BuiltinArgumentsEii
+      2    3.6%    Eval: ~<anonymous> internal/bootstrap/loaders.js:1:1
+      1    1.8%    LazyCompile: ~wildcard tls.js:321:22
+      1  100.0%      t __ZN2v88internal12_GLOBAL__N_133MatchArrayElementsKindToArgumentsEPNS0_7IsolateENS0_6HandleINS0_7JSArrayEEEPNS0_16BuiltinArgumentsEii
+      1  100.0%        LazyCompile: ~checkServerIdentity tls.js:267:59
+      1  100.0%          LazyCompile: ~onConnectSecure _tls_wrap.js:1501:25
+      1  100.0%            LazyCompile: ~emit events.js:349:44
+      1    1.8%    LazyCompile: ~setHeader file:///Users/davidlee/Desktop/node-knowledge/node_modules/axios/lib/core/AxiosHeaders.js:82:23
+      1  100.0%      LazyCompile: ~set file:///Users/davidlee/Desktop/node-knowledge/node_modules/axios/lib/core/AxiosHeaders.js:79:6
+      1  100.0%        LazyCompile: ~dispatchHttpRequest file:///Users/davidlee/Desktop/node-knowledge/node_modules/axios/lib/adapters/http.js:161:54
+      1  100.0%          LazyCompile: ~<anonymous> file:///Users/davidlee/Desktop/node-knowledge/node_modules/axios/lib/adapters/http.js:123:22
+      1  100.0%            t __ZN2v88internal12_GLOBAL__N_133MatchArrayElementsKindToArgumentsEPNS0_7IsolateENS0_6HandleINS0_7JSArrayEEEPNS0_16BuiltinArgumentsEii
+      1    1.8%    LazyCompile: ~resolveExports internal/modules/cjs/loader.js:468:24
+      1  100.0%      LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:490:28
+      1  100.0%        LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:845:35
+      1  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:753:24
+      1  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:995:36
+      1    1.8%    LazyCompile: ~resolve path.js:1067:10
+      1  100.0%      LazyCompile: ~pathToFileURL internal/url.js:1408:23
+      1  100.0%        LazyCompile: ~defaultResolve internal/modules/esm/resolve.js:824:24
+      1  100.0%          LazyCompile: ~resolve internal/modules/esm/loader.js:84:16
+      1  100.0%            LazyCompile: ~getModuleJob internal/modules/esm/loader.js:241:21
+      1    1.8%    LazyCompile: ~request https.js:337:17
+      1  100.0%      LazyCompile: ~RedirectableRequest._performRequest /Users/davidlee/Desktop/node-knowledge/node_modules/follow-redirects/index.js:309:58
+      1  100.0%        LazyCompile: ~RedirectableRequest /Users/davidlee/Desktop/node-knowledge/node_modules/follow-redirects/index.js:70:29
+      1  100.0%          LazyCompile: ~request /Users/davidlee/Desktop/node-knowledge/node_modules/follow-redirects/index.js:502:21
+      1  100.0%            LazyCompile: ~dispatchHttpRequest file:///Users/davidlee/Desktop/node-knowledge/node_modules/axios/lib/adapters/http.js:161:54
+      1    1.8%    LazyCompile: ~readSync fs.js:579:18
+      1  100.0%      LazyCompile: ~tryReadSync fs.js:379:21
+      1  100.0%        LazyCompile: ~readFileSync fs.js:391:22
+      1  100.0%          LazyCompile: ~cjsPreparseModuleExports internal/modules/esm/translators.js:225:34
+      1  100.0%            LazyCompile: ~commonjsStrategy internal/modules/esm/translators.js:182:60
+      1    1.8%    LazyCompile: ~processCallback zlib.js:536:25
+      1    1.8%    LazyCompile: ~prepareStackTrace internal/errors.js:81:27
+      1  100.0%      T __ZN2v88internal9Accessors16ErrorStackGetterENS_5LocalINS_4NameEEERKNS_20PropertyCallbackInfoINS_5ValueEEE
+      1  100.0%        LazyCompile: ~addCodeToName internal/errors.js:166:61
+      1  100.0%          LazyCompile: ~NodeError internal/errors.js:309:16
+      1  100.0%            LazyCompile: ~onParseError internal/url.js:269:22
+      1    1.8%    LazyCompile: ~patchProcessObject internal/bootstrap/pre_execution.js:76:28
+      1  100.0%      LazyCompile: ~prepareMainThreadExecution internal/bootstrap/pre_execution.js:21:36
+      1  100.0%        Eval: ~<anonymous> internal/main/run_main_module.js:1:1
+      1    1.8%    LazyCompile: ~moduleStrategy internal/modules/esm/translators.js:140:56
+      1  100.0%      t __ZN2v88internal12_GLOBAL__N_133MatchArrayElementsKindToArgumentsEPNS0_7IsolateENS0_6HandleINS0_7JSArrayEEEPNS0_16BuiltinArgumentsEii
+      1    1.8%    LazyCompile: ~log internal/console/constructor.js:363:6
+      1  100.0%      t __ZN4node9inspector12_GLOBAL__N_120InspectorConsoleCallERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1  100.0%        LazyCompile: ~main file:///Users/davidlee/Desktop/node-knowledge/api.js:6:14
+      1  100.0%          t __ZN2v88internal12_GLOBAL__N_133MatchArrayElementsKindToArgumentsEPNS0_7IsolateENS0_6HandleINS0_7JSArrayEEEPNS0_16BuiltinArgumentsEii
+      1    1.8%    LazyCompile: ~getMergedValue file:///Users/davidlee/Desktop/node-knowledge/node_modules/axios/lib/core/mergeConfig.js:22:26
+      1  100.0%      LazyCompile: ~mergeDeepProperties file:///Users/davidlee/Desktop/node-knowledge/node_modules/axios/lib/core/mergeConfig.js:34:31
+      1  100.0%        LazyCompile: ~computeConfigValue file:///Users/davidlee/Desktop/node-knowledge/node_modules/axios/lib/core/mergeConfig.js:99:94
+      1  100.0%          LazyCompile: ~forEach file:///Users/davidlee/Desktop/node-knowledge/node_modules/axios/lib/utils.js:237:17
+      1  100.0%            LazyCompile: ~mergeConfig file:///Users/davidlee/Desktop/node-knowledge/node_modules/axios/lib/core/mergeConfig.js:17:36
+      1    1.8%    LazyCompile: ~get internal/url.js:624:8
+      1  100.0%      LazyCompile: ~format internal/url.js:406:27
+      1  100.0%        LazyCompile: ~get internal/url.js:462:8
+      1  100.0%          LazyCompile: ~isURLInstance internal/url.js:1445:23
+      1  100.0%            LazyCompile: ~fileURLToPath internal/url.js:1366:23
+      1    1.8%    LazyCompile: ~endReadable internal/streams/readable.js:1316:21
+      1  100.0%      LazyCompile: ~Readable.read internal/streams/readable.js:374:35
+      1  100.0%        LazyCompile: ~Socket.read net.js:633:33
+      1  100.0%          LazyCompile: ~onStreamRead internal/stream_base_commons.js:165:22
+      1    1.8%    LazyCompile: ~connect _tls_wrap.js:1582:35
+      1  100.0%      LazyCompile: ~createConnection https.js:112:26
+      1  100.0%        LazyCompile: ~createSocket _http_agent.js:296:53
+      1  100.0%          LazyCompile: ~addRequest _http_agent.js:225:49
+      1  100.0%            LazyCompile: ~ClientRequest _http_client.js:93:23
+      1    1.8%    LazyCompile: ~captureLargerStackTrace internal/errors.js:409:35
+      1  100.0%      LazyCompile: ~addCodeToName internal/errors.js:166:61
+      1  100.0%        LazyCompile: ~NodeError internal/errors.js:309:16
+      1  100.0%          LazyCompile: ~onParseError internal/url.js:269:22
+      1  100.0%            t __ZN4node3url12_GLOBAL__N_15ParseERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    1.8%    LazyCompile: ~_addListener events.js:428:22
+      1  100.0%      LazyCompile: ~prependListener events.js:510:29
+      1  100.0%        LazyCompile: ~connect _tls_wrap.js:1582:35
+      1  100.0%          LazyCompile: ~createConnection https.js:112:26
+      1  100.0%            LazyCompile: ~createSocket _http_agent.js:296:53
+      1    1.8%    LazyCompile: ~Socket.read net.js:633:33
+      1  100.0%      LazyCompile: ~afterConnect net.js:1121:22
+      1    1.8%    LazyCompile: ~Readable.push internal/streams/readable.js:205:35
+      1  100.0%      LazyCompile: ~onStreamRead internal/stream_base_commons.js:165:22
+      1    1.8%    LazyCompile: ~NodeError internal/errors.js:309:16
+      1  100.0%      LazyCompile: ~onParseError internal/url.js:269:22
+      1  100.0%        t __ZN4node3url12_GLOBAL__N_15ParseERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1  100.0%          LazyCompile: ~URL internal/url.js:338:14
+      1  100.0%            LazyCompile: ~defaultResolve internal/modules/esm/resolve.js:824:24
+      1    1.8%    LazyCompile: ~ModuleJob internal/modules/esm/module_job.js:55:14
+      1  100.0%      LazyCompile: ~getModuleJob internal/modules/esm/loader.js:241:21
+      1  100.0%        t __ZN2v88internal12_GLOBAL__N_133MatchArrayElementsKindToArgumentsEPNS0_7IsolateENS0_6HandleINS0_7JSArrayEEEPNS0_16BuiltinArgumentsEii
+      1    1.8%    LazyCompile: ~Module._extensions..json internal/modules/cjs/loader.js:1148:39
+      1  100.0%      LazyCompile: ~Module.load internal/modules/cjs/loader.js:967:33
+      1  100.0%        LazyCompile: ~Module._load internal/modules/cjs/loader.js:753:24
+      1  100.0%          LazyCompile: ~Module.require internal/modules/cjs/loader.js:995:36
+      1  100.0%            LazyCompile: ~require internal/modules/cjs/helpers.js:105:31
+      1    1.8%    LazyCompile: ~E internal/errors.js:343:11
+      1  100.0%      Eval: ~<anonymous> internal/errors.js:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1  100.0%            LazyCompile: ~setupPrepareStackTrace internal/bootstrap/node.js:254:32
+      1    1.8%    LazyCompile: ~<anonymous> file:///Users/davidlee/Desktop/node-knowledge/api.js:32:38
+      1  100.0%      t __ZN2v88internal12_GLOBAL__N_133MatchArrayElementsKindToArgumentsEPNS0_7IsolateENS0_6HandleINS0_7JSArrayEEEPNS0_16BuiltinArgumentsEii
+      1  100.0%        LazyCompile: ~<anonymous> file:///Users/davidlee/Desktop/node-knowledge/api.js:28:57
+      1  100.0%          t __ZN2v88internal12_GLOBAL__N_133MatchArrayElementsKindToArgumentsEPNS0_7IsolateENS0_6HandleINS0_7JSArrayEEEPNS0_16BuiltinArgumentsEii
+      1  100.0%            LazyCompile: ~main file:///Users/davidlee/Desktop/node-knowledge/api.js:6:14
+      1    1.8%    Eval: ~<anonymous> internal/url.js:1:1
+      1  100.0%      LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%        LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1  100.0%          Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    1.8%    Eval: ~<anonymous> internal/process/execution.js:1:1
+      1  100.0%      LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%        LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1  100.0%          Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    1.8%    Eval: ~<anonymous> internal/constants.js:1:1
+      1  100.0%      LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%        LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1  100.0%          Eval: ~<anonymous> internal/console/constructor.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    1.8%    Eval: ~<anonymous> fs.js:1:1
+      1  100.0%      LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%        LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1  100.0%          Eval: ~<anonymous> internal/source_map/source_map_cache.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    1.8%    Eval: ~<anonymous> _http_server.js:1:1
+      1  100.0%      LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%        LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1  100.0%          Eval: ~<anonymous> http.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+
+     25   19.5%  T __ZN4node13native_module15NativeModuleEnv15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     25  100.0%    LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+     24   96.0%      LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      2    8.3%        Eval: ~<anonymous> stream.js:1:1
+      2  100.0%          LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      2  100.0%            LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      2    8.3%        Eval: ~<anonymous> internal/modules/cjs/loader.js:1:1
+      2  100.0%          LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      2  100.0%            LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1    4.2%        LazyCompile: ~setupPrepareStackTrace internal/bootstrap/node.js:254:32
+      1  100.0%          Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    4.2%        LazyCompile: ~setupBuffer internal/bootstrap/node.js:302:21
+      1  100.0%          Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    4.2%        LazyCompile: ~lookupAndConnect net.js:995:26
+      1  100.0%          LazyCompile: ~Socket.connect net.js:940:36
+      1  100.0%            LazyCompile: ~connect _tls_wrap.js:1582:35
+      1    4.2%        LazyCompile: ~lazyLoadStreams fs.js:2065:25
+      1  100.0%          LazyCompile: ~get ReadStream fs.js:2173:17
+      1  100.0%            t __ZN2v88internal12_GLOBAL__N_133MatchArrayElementsKindToArgumentsEPNS0_7IsolateENS0_6HandleINS0_7JSArrayEEEPNS0_16BuiltinArgumentsEii
+      1    4.2%        LazyCompile: ~initializeSourceMapsHandlers internal/bootstrap/pre_execution.js:452:38
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution internal/bootstrap/pre_execution.js:21:36
+      1  100.0%            Eval: ~<anonymous> internal/main/run_main_module.js:1:1
+      1    4.2%        Eval: ~<anonymous> tls.js:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1    4.2%        Eval: ~<anonymous> internal/util/inspect.js:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1    4.2%        Eval: ~<anonymous> internal/url.js:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1    4.2%        Eval: ~<anonymous> internal/modules/esm/loader.js:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1    4.2%        Eval: ~<anonymous> internal/modules/esm/get_source.js:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1    4.2%        Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    4.2%        Eval: ~<anonymous> internal/blob.js:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1    4.2%        Eval: ~<anonymous> http.js:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%            LazyCompile: ~compileForPublicLoader internal/bootstrap/loaders.js:220:25
+      1    4.2%        Eval: ~<anonymous> fs.js:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1    4.2%        Eval: ~<anonymous> events.js:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1    4.2%        Eval: ~<anonymous> crypto.js:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1    4.2%        Eval: ~<anonymous> buffer.js:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1    4.2%        Eval: ~<anonymous> assert.js:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%            LazyCompile: ~compileForPublicLoader internal/bootstrap/loaders.js:220:25
+      1    4.2%        Eval: ~<anonymous> _http_outgoing.js:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1    4.2%        Eval: ~<anonymous> _http_agent.js:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1    4.0%      LazyCompile: ~compileForPublicLoader internal/bootstrap/loaders.js:220:25
+      1  100.0%        LazyCompile: ~loadNativeModule internal/modules/cjs/helpers.js:48:26
+      1  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:753:24
+      1  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:995:36
+
+      8    6.3%  T _thread_info
+
+      4    3.1%  T __ZN4node6crypto13SecureContext12AddRootCertsERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      4  100.0%    LazyCompile: ~createSecureContext _tls_common.js:95:59
+      4  100.0%      LazyCompile: ~connect _tls_wrap.js:1582:35
+      4  100.0%        LazyCompile: ~createConnection https.js:112:26
+      4  100.0%          LazyCompile: ~createSocket _http_agent.js:296:53
+      4  100.0%            LazyCompile: ~addRequest _http_agent.js:225:49
+
+      3    2.3%  t __ZN4node3url12_GLOBAL__N_15ParseERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      3  100.0%    LazyCompile: ~URL internal/url.js:338:14
+      2   66.7%      LazyCompile: ~URL internal/url.js:338:14
+      1   50.0%        LazyCompile: ~moduleResolve internal/modules/esm/resolve.js:761:23
+      1  100.0%          LazyCompile: ~defaultResolve internal/modules/esm/resolve.js:824:24
+      1  100.0%            LazyCompile: ~resolve internal/modules/esm/loader.js:84:16
+      1   50.0%        LazyCompile: ~dispatchHttpRequest file:///Users/davidlee/Desktop/node-knowledge/node_modules/axios/lib/adapters/http.js:161:54
+      1  100.0%          LazyCompile: ~<anonymous> file:///Users/davidlee/Desktop/node-knowledge/node_modules/axios/lib/adapters/http.js:123:22
+      1  100.0%            t __ZN2v88internal12_GLOBAL__N_133MatchArrayElementsKindToArgumentsEPNS0_7IsolateENS0_6HandleINS0_7JSArrayEEEPNS0_16BuiltinArgumentsEii
+      1   33.3%      LazyCompile: ~pathToFileURL internal/url.js:1408:23
+      1  100.0%        LazyCompile: ~defaultResolve internal/modules/esm/resolve.js:824:24
+      1  100.0%          LazyCompile: ~resolve internal/modules/esm/loader.js:84:16
+      1  100.0%            LazyCompile: ~getModuleJob internal/modules/esm/loader.js:241:21
+
+      3    2.3%  t __ZN4node2fsL4ReadERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      3  100.0%    LazyCompile: ~readSync fs.js:579:18
+      3  100.0%      LazyCompile: ~tryReadSync fs.js:379:21
+      3  100.0%        LazyCompile: ~readFileSync fs.js:391:22
+      2   66.7%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1123:37
+      2  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:967:33
+      1   33.3%          LazyCompile: ~Module._extensions..json internal/modules/cjs/loader.js:1148:39
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:967:33
+
+      3    2.3%  UNKNOWN
+      1   33.3%    LazyCompile: ~Writable.write internal/streams/writable.js:258:36
+      1  100.0%      LazyCompile: ~_flushOutput _http_outgoing.js:916:63
+      1  100.0%        LazyCompile: ~_flush _http_outgoing.js:899:51
+      1  100.0%          LazyCompile: ~onSocketNT _http_client.js:816:20
+      1  100.0%            LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:67:35
+
+      3    2.3%  T _guarded_close_np
+      1   33.3%    LazyCompile: ~emit events.js:349:44
+      1  100.0%      LazyCompile: ~prefinish internal/streams/writable.js:622:19
+      1  100.0%        LazyCompile: ~finishMaybe internal/streams/writable.js:635:21
+      1  100.0%          LazyCompile: ~afterWrite internal/streams/writable.js:456:20
+      1  100.0%            LazyCompile: ~onwrite internal/streams/writable.js:394:17
+      1   33.3%    Eval: ~<anonymous> internal/crypto/cipher.js:1:1
+      1  100.0%      LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%        LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1  100.0%          Eval: ~<anonymous> crypto.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+
+      3    2.3%  T __ZN4node7binding18GetInternalBindingERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      3  100.0%    LazyCompile: ~internalBinding internal/bootstrap/loaders.js:138:45
+      1   33.3%      Eval: ~<anonymous> tls.js:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1  100.0%            Eval: ~<anonymous> https.js:1:1
+      1   33.3%      Eval: ~<anonymous> internal/util.js:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1   33.3%      Eval: ~<anonymous> internal/async_hooks.js:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+
+      2    1.6%  t __ZN4node2fsL22InternalModuleReadJSONERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2  100.0%    LazyCompile: ~read internal/modules/package_json_reader.js:16:14
+      1   50.0%      LazyCompile: ~readPackage internal/modules/cjs/loader.js:287:21
+      1  100.0%        LazyCompile: ~resolveExports internal/modules/cjs/loader.js:468:24
+      1  100.0%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:490:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:845:35
+      1   50.0%      LazyCompile: ~getPackageConfig internal/modules/esm/resolve.js:121:26
+      1  100.0%        LazyCompile: ~packageResolve internal/modules/esm/resolve.js:656:24
+      1  100.0%          LazyCompile: ~moduleResolve internal/modules/esm/resolve.js:761:23
+      1  100.0%            LazyCompile: ~defaultResolve internal/modules/esm/resolve.js:824:24
+
+      2    1.6%  T __ZN4node7TTYWrap3NewERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2  100.0%    LazyCompile: ~WriteStream tty.js:85:21
+      2  100.0%      LazyCompile: ~createWritableStdioStream internal/bootstrap/switches/is_main_thread.js:41:35
+      1   50.0%        LazyCompile: ~getStdout internal/bootstrap/switches/is_main_thread.js:120:19
+      1  100.0%          LazyCompile: ~Readable.pipe internal/streams/readable.js:631:35
+      1  100.0%            LazyCompile: ~pipeline internal/streams/pipeline.js:128:18
+      1   50.0%        LazyCompile: ~getStderr internal/bootstrap/switches/is_main_thread.js:132:19
+      1  100.0%          Eval: ~<anonymous> /Users/davidlee/Desktop/node-knowledge/node_modules/debug/src/node.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1067:37
+
+      2    1.6%  T __ZN4node6loader10ModuleWrap3NewERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      2  100.0%    LazyCompile: ~moduleStrategy internal/modules/esm/translators.js:140:56
+      2  100.0%      t __ZN2v88internal12_GLOBAL__N_133MatchArrayElementsKindToArgumentsEPNS0_7IsolateENS0_6HandleINS0_7JSArrayEEEPNS0_16BuiltinArgumentsEii
+
+      2    1.6%  /usr/lib/system/libsystem_pthread.dylib
+
+      2    1.6%  /usr/lib/system/libsystem_malloc.dylib
+      1   50.0%    LazyCompile: ~defaultResolve internal/modules/esm/resolve.js:824:24
+      1  100.0%      LazyCompile: ~resolve internal/modules/esm/loader.js:84:16
+      1  100.0%        LazyCompile: ~getModuleJob internal/modules/esm/loader.js:241:21
+      1  100.0%          LazyCompile: ~<anonymous> internal/modules/esm/module_job.js:75:41
+      1  100.0%            T __ZN4node6loader10ModuleWrap4LinkERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+
