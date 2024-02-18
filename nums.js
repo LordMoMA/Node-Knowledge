@@ -1,11 +1,8 @@
-function tenSquared() {
-    console.log(10*10); 
- }
- tenSquared() // 100
+let num1 = 1;
+let num2 = 1
 
-
-function nineSquared() {
-    console.log(9*9); 
- }
- nineSquared() // 100
+console.log(++num1) // 2
+console.log(num2++) // 1
+console.log(num1) // 2
+console.log(num2) // 2
 
